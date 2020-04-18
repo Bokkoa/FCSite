@@ -1,3 +1,164 @@
+/* Fondo oscuro: #2f404d
+Azul-verde oscuro: #3d898d
+Azul cyan: #85ebd9
+Gris claro: #e2dddf
+gris oscuro: #b0acb0 */
+
+/*
++========+
+|GENERAL |
++========+
+*/
+*, *::after,
+*::before{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    background: red;
+    background: no-repeat;
+    background-image: url('../images/bg.jpg');
+      /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+        the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+        on the container's size */
+    background-size: cover;
+    
+    /* Set a background color that will be displayed
+        while the background image is loading */
+    background-color: #464646;
+}
+
+.clearfix{
+    clear:both;
+    float:none;
+}
+
+/*
++========+
+|Navbar  |
++========+
+*/
+
+#navmenu{
+    width: 100%;
+    float: right;
+    line-height: 85px;
+    /* text-align: center; */
+    font-size: 22px;
+    background: #3d898d6c;
+
+}
+
+#logo{
+    width: 30%;
+    display: block;
+    font-size: 22px;
+    float: left;
+}
+
+#logo img{
+    display: block;
+    float: left;
+    height: 85px;
+    width: 80px;
+    margin-top: -4px;
+    /* border: 1px solid black; */
+    /* -webkit-filter: drop-shadow(1px 1px 0 rgb(147, 42, 179))
+    drop-shadow(-1px -1px 0 rgb(252, 27, 27));
+    filter: drop-shadow(1px 1px 0 rgb(255, 48, 48)) 
+    drop-shadow(-1px -1px 0 rgb(248, 33, 33)); */
+    animation: pulse-blue infinite 1s linear;
+}
+
+#brand{
+    display: block;
+    margin: 0px;
+    float: left;
+}
+
+
+
+#navmenu li{
+    display: inline-block;
+    list-style: none;
+}
+
+#navmenu li a{
+    text-decoration: none;
+    color: #e2dddf;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 300ms;
+}
+
+#navmenu li a:hover{
+    color: #b0acb0;
+}
+
+
+/*
++=======+
+|Cards  |
++=======+
+*/
+
+.card{
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card-header{
+    background: #3d898d;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius:  15px  15px  0px  0px;
+}
+
+.card-body{
+    background: white;
+    width: 100%;
+    display: block;
+}
+
+/*
++============+
+|Animations  |
++============+
+*/
+
+/* PULSE FOR BORDER OF TRANSPARENT PNG */
+@keyframes pulse-blue{
+    from { 
+        /* border-color: #749a02;  */
+        -webkit-filter: drop-shadow (0 0 9px rgba(51, 51, 51, 0)) 
+        drop-shadow(-1px -1px 0  rgba(51, 51, 51, 0));
+        filter: drop-shadow(1px 1px 0  rgba(51, 51, 51, 0)) 
+        drop-shadow(-1px -1px 0  rgba(51, 51, 51, 0));
+    }
+    50% { 
+        /* border-color: #91bd09;  */
+        -webkit-filter: drop-shadow (0 0 18px #06f7ff)
+        drop-shadow(1px -1px 0 #06f7ff);
+        filter: drop-shadow(1px 1px 0 #06f7ff) 
+        drop-shadow(-1px -1px 0 #06f7ff);
+     }
+    to { 
+        /* border-color: #749a02;  */
+        -webkit-filter: drop-shadow (0 0 9px rgba(51, 51, 51, 0))
+        drop-shadow(-1px -1px 0 rgba(51, 51, 51, 0));
+        filter: drop-shadow(1px 1px 0 rgba(51, 51, 51, 0)) 
+        drop-shadow(-1px -1px 0 rgba(51, 51, 51, 0)); 
+    }
 }
