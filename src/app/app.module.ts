@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 //para las rutas
 import { routing, appRoutingProviders } from './app.routing';
 
+//for transitions
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -12,6 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './views/skills/skills.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
+import { MusicComponent } from './components/music/music.component';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +27,13 @@ import { ErrorComponent } from './components/error/error.component';
     NavbarComponent,
     SkillsComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
     routing
   ],
   providers: [appRoutingProviders],

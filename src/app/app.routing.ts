@@ -8,9 +8,9 @@ import { SkillsComponent } from './views/skills/skills.component';
 
 //Array de rutas
 const appRoutes: Routes = [
-    {path: '', component: HomeComponent},
-    {path: 'skills', component:SkillsComponent},
-    {path: 'contacto', component:ContactComponent},
+    {path: 'home', component: HomeComponent, data: { animationState: 'One'} },
+    {path: 'skills', component:SkillsComponent, data: { animationState: 'Two'} },
+    {path: 'contacto', component:ContactComponent, data: { animationState: 'Three'} },
     {path: '**', component: ErrorComponent},
 
 ];
@@ -18,6 +18,5 @@ const appRoutes: Routes = [
 
 //Exportar el modulo de rutas
 export const appRoutingProviders: any[] = [];
-
 //establecer todas las rutas
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
