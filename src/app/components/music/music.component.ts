@@ -21,7 +21,7 @@ export class MusicComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.playMusic();
+    // this.playMusic();
   }
 
   stopMusic()

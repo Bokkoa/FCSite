@@ -6,7 +6,7 @@
   <title>Felipe Cruz</title>
 
 </head>
-<body>
+<body [ngClass]="{'bg-blue':_router.url == '/'}">
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="/__/firebase/7.14.1/firebase-app.js"></script>
@@ -18,21 +18,26 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
   
-  <app-navbar></app-navbar>
-
-    <div class="row">                                     <!--Para las animaciones del router-->
+  <app-navbar></app-navbar >
+    <div class="container-fluid row" style="margin-top: 120px;">                                     <!--Para las animaciones del router-->
       <div class="container col-lg-8 col-md-10 col-sm-12" [@triggerAnimation]="prepareRoute(outlet)">
           <router-outlet #outlet="outlet"></router-outlet>
       </div>
-      <div class="container col-lg-4 col-md-2 col-sm-12">
-        <app-music></app-music>
+      
+      <div class="container col-lg-3 col-md-2 col-sm-12">
+        <app-music *ngIf="_router.url != '/'"></app-music>
       </div>
+
     </div>
   
 
-  <footer>
-    Image background from  <a href="https://pixabay.com/es/users/11099539-11099539/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4699096">Serkan Turk</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4699096">Pixabay</a>
-    <!-- <p>Image background from <a href="https://pixabay.com/es/users/Ethan_Zhan-9583454/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3723725">Ethan Zhan</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3723725">Pixabay</a></p> -->
+  <footer class="bg-dark" *ngIf="_router.url != '/'">
+    <!-- Hexagonos derecha -->
+    Imagen de <a href="https://pixabay.com/es/users/CreativeMagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">Magic Creative</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">Pixabay</a>
+    <!-- lluvia -->
+    <!-- Imagen de <a href="https://pixabay.com/es/users/pic_matic-11207794/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4559068">Robin Lieck</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4559068">Pixabay</a> -->
+    <!-- paneles -->
+    <!-- Imagen de <a href="https://pixabay.com/es/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=34984">Clker-Free-Vector-Images</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=34984">Pixabay</a> -->
   </footer>
   
 </body>
