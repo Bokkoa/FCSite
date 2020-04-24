@@ -26,15 +26,22 @@ export class AppComponent implements OnInit{
       $('a').on('click', function(e){
         if(pathname === '/')
         {
+          $('app-navbar').stop(true,true).addClass("bg-dark", 1000);
+          
           $('.music-player').hide();
+          $('footer').hide();
           $('.card').hide();
           setInterval(function(){
           $('.music-player').show('slow');
           $('.card').show('slow');
+          $('footer').show('slow');
           }, 800);
         } 
         pathname = window.location.pathname; 
       });
+      $(window).on('popstate', function(event) {
+         pathname = window.location.pathname; 
+       });
     });
 
 

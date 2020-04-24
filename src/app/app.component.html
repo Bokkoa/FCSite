@@ -6,7 +6,7 @@
   <title>Felipe Cruz</title>
 
 </head>
-<body [ngClass]="{'bg-blue':_router.url == '/'}">
+<body>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="/__/firebase/7.14.1/firebase-app.js"></script>
@@ -19,19 +19,19 @@
   <script src="/__/firebase/init.js"></script>
   
   <app-navbar></app-navbar >
-    <div class="container-fluid row" style="margin-top: 120px;">                                     <!--Para las animaciones del router-->
-      <div class="container col-lg-8 col-md-10 col-sm-12" [@triggerAnimation]="prepareRoute(outlet)">
+    <div id="content" class="container-fluid row" style="margin-top: 120px;">                                     <!--Para las animaciones del router-->
+      <div class="container col-lg-10 col-md-10 col-sm-12" [@triggerAnimation]="prepareRoute(outlet)">
           <router-outlet #outlet="outlet"></router-outlet>
       </div>
       
-      <div class="container col-lg-3 col-md-2 col-sm-12">
+      <div class="container col-lg-2 col-md-2 col-sm-12">
         <app-music *ngIf="_router.url != '/'"></app-music>
       </div>
 
     </div>
   
 
-  <footer class="bg-dark" *ngIf="_router.url != '/'">
+  <footer [ngClass]="{'bg-dark':_router.url != '/'}" *ngIf="_router.url != '/'">
     <!-- Hexagonos derecha -->
     Imagen de <a href="https://pixabay.com/es/users/CreativeMagic-480360/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">Magic Creative</a> en <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3227459">Pixabay</a>
     <!-- lluvia -->
