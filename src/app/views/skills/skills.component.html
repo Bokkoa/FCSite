@@ -3,45 +3,47 @@
     <div class="card col-12 col-lg-12">
         <div class="card-header">
             <h1 class="header">
-                Mi experiencia
+                Experiencia
             </h1>
         </div>
         <div class="card-body">
             <section class="skills">
-               
+
                 <div class="row">
 
-                    <div class="col-lg-9 col-md-9 col-sm-12">
-                        <p>Quiero que esto sea lo más visual posible,
-                            puede que algunas de estas tecnologías sean
-                            obvias y basicas, pero he decidio dividir en
-                            secciones las distintas herramientas que 
-                            afortunadamente conozco.
+                    <!-- <div class="col-lg-9 col-md-9 col-sm-12">
+                        <p>
                         </p>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-3 col-md-3 col-sm-12" style="overflow-x:auto;">
-                    
+                    <div class="col-lg-12 col-md-12 col-sm-12" style="overflow-x:auto;">
+
                         <p>Adjunto esta simbología: </p>
                         <table class="table">
                             <tr>
-                                <td> <fa-icon [icon]="faCircle" class="text-success"></fa-icon> </td> 
+                                <td>
+                                    <fa-icon [icon]="faCircle" class="text-success"></fa-icon>
+                                </td>
                                 <td>Realicé proyectos grandes.</td>
-                            </tr> 
+                            </tr>
                             <tr>
-                                <td> <fa-icon [icon]="faCircle" class="text-info"></fa-icon> </td> 
-                                <td>Puedo hacer proyectos, pero aún aprendo.</td>
-                            </tr> 
+                                <td>
+                                    <fa-icon [icon]="faCircle" class="text-info"></fa-icon>
+                                </td>
+                                <td>Puedo hacer proyectos, pero aún estudio la herramienta.</td>
+                            </tr>
 
                             <tr>
-                                <td> <fa-icon [icon]="faCircle" class="text-danger"></fa-icon> </td> 
-                                <td>Aún aprendo o estoy por aprenderlo.</td>
+                                <td>
+                                    <fa-icon [icon]="faCircle" class="text-danger"></fa-icon>
+                                </td>
+                                <td>Aprendiendo o estoy por aprenderlo.</td>
                             </tr>
                         </table>
 
                     </div>
                 </div>
-                
+
                 <hr>
 
                 <div class="container-fluid" style="margin-top: 10px;">
@@ -51,162 +53,99 @@
 
                         <!-- LENGUAJES -->
 
-                        <div class="col-lg-6 col-md-6 col-sm-12 skill-list" >
+                        <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Lenguajes</h4>
-                            <ul>
+                            <ul class="skill-list" *ngFor="let skill of LanguageSkills">
                                 <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/csharp.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/php.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/ruby.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/python.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/c.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/swipl.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/java.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/cpp.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/r.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/go.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/javascript.png" alt="">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <!-- BASES DE DATOS -->
 
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Bases de datos</h4>
-                            <ul class="skill-list">
+                            <ul class="skill-list" *ngFor="let skill of DbSkills">
                                 <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/mysql.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/sqlserver.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/sqlite.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/oracle.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/mongodb.png" alt="">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>  <!-- FIN DE ROW 1-->
+
+                    </div> <!-- FIN DE ROW 1-->
                     
                     <!-- ROW 2 -->
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Frameworks Web</h4>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-blue" src="../../../assets/images/icons/django.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/laravel.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-red" src="../../../assets/images/icons/flask.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/nodejs.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-blue" src="../../../assets/images/icons/vuejs.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-red" src="../../../assets/images/icons/react.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/angular.png" alt="">
-                            </li>
+                            <ul class="skill-list" *ngFor="let skill of WebFrameworksSkills">
+                                <li class="list-item-skill">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Librerías y básicos</h4>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/css3.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/html5.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/typescript.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-blue" src="../../../assets/images/icons/express.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/jquery.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-green" src="../../../assets/images/icons/bootstrap.png" alt="">
-                            </li>
-                            <li class="list-item-skill">
-                                <img class="skill-icon skill-red" src="../../../assets/images/icons/graphql.png" alt="">
-                            </li>
+                            <ul class="skill-list" *ngFor="let skill of BasicsAndLibrarysSkills">
+                                <li class="list-item-skill">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+
                     </div> <!-- FIN DE ROW 2-->
 
 
-                          <!-- ROW 3 -->
-                          <div class="row"> 
-                            <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
-                                <h4 class="subheader">Sistemas operativos</h4>
+                    <!-- ROW 3 -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
+                            <h4 class="subheader">Sistemas operativos</h4>
+                            
+                            <ul class="skill-list" *ngFor="let skill of OSSkills">
                                 <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/ubuntu.png" alt="">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
                                 </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/windows.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/tails.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/debian.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-red" src="../../../assets/images/icons/kali.png" alt="">
-                                </li>
-                            </div>
+                            </ul>
+                          
+                        </div>
 
-                            <div class="col-lg-6 col-md-6 col-sm-12skill-list">
-                                <h4 class="subheader">Extras</h4>
+                        <div class="col-lg-6 col-md-6 col-sm-12skill-list">
+                            <h4 class="subheader">Extras</h4>
+                            
+                            <ul class="skill-list" *ngFor="let skill of ExtraSkills">
                                 <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/unity.png" alt="">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
                                 </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/blender.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/photoshop.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-blue" src="../../../assets/images/icons/aftereffects.png" alt="">
-                                </li>
-                                <li class="list-item-skill">
-                                    <img class="skill-icon skill-green" src="../../../assets/images/icons/visualstudio.png" alt="">
-                                </li>
-                            </div>
-                        </div> <!-- FIN DE ROW 3-->
+                            </ul>
+
+                        </div>
+                    </div> <!-- FIN DE ROW 3-->
 
                 </div>
 

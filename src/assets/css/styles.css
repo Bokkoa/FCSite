@@ -33,6 +33,9 @@ body{
     margin-bottom: 60px;
 }
 
+#network-section{
+    margin: 20px;
+}
 .clearfix{
     clear:both;
     float:none;
@@ -41,6 +44,18 @@ body{
 .subheader{
     text-align: center;
     font-size: 30px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
 }
 
 /* AUX COLORS */
@@ -61,7 +76,7 @@ body{
 }
 
 .text-info{
-    color: lightblue !important;
+    color: rgb(37, 167, 241) !important;
 }
 
 .skill-blue{
@@ -160,11 +175,11 @@ body{
     border: 2px solid rgb(86, 230, 255);
     border-radius: 15px;
     padding: 0px;
-    animation: border-neon-pulse 2s infinite;
+    /* animation: border-neon-pulse 2s infinite; */
 }
 
 .card-header{
-    background: #3d898d;
+    background: #a9c5c780;
     padding-top: 15px;
     padding-bottom: 15px;
     color: white;
@@ -172,6 +187,9 @@ body{
     display: block;
     text-align: center;
     border-radius:  15px  15px  0px  0px;
+    background: radial-gradient(circle, rgb(3, 114, 148) 0%,rgb(176, 243, 255) 100%);
+    /* background: radial-gradient(circle, rgba(255, 129, 213, 1) 0%,rgba(86, 230, 255, 1) 100%); */
+    animation: bg-neon-pulse 6s infinite;
 }
 
 .card-body{
@@ -334,6 +352,34 @@ body{
     }
 }
 
+@keyframes bg-neon-pulse{
+    0%{
+        /* background: rgb(255, 129, 213); */
+        background: radial-gradient(circle, rgb(3, 114, 148) 0%,rgb(176, 243, 255) 100%);
+        background-position:left top;
+        background-size:200% 100%;
+    }
+    /* 49.9% {
+         background-position:left top;   
+      } */
+    50%{
+        /* background-size:100% 100%; */
+        background-position:right top;
+        /* background:rgb(86, 230, 255); */
+        /* background: radial-gradient(circle, rgba(86, 230, 255, 1) 0%, rgba(255, 129, 213, 1) 100%); */
+    }
+    /* 50.1% {
+        background-position:right top; 
+    } */
+    100%{
+        background-position:left top;
+        background-size:200% 100%;
+        /* background-size:200% 100%; */
+        /* background: rgb(255, 129, 213); */
+        /* background: radial-gradient(circle, rgba(255, 129, 213, 1) 0%, rgba(148,187,233,1) 100%); */
+    }
+}
+
 @keyframes fade-background-dark{
     from{
         background-color:  rgba(0, 0, 0, 0);
@@ -379,13 +425,18 @@ footer a{
     text-align: center;
     color: white;
     font-size: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px;
     border: 2px solid rgb(86, 230, 255);
     border-radius: 10px;
-    padding: 20px;
     justify-content: center;
+    */
+    padding: 20px; 
     background: #000000c0;
-    animation: border-neon-pulse 2s infinite;
+    /* animation: border-neon-pulse 2s infinite; */
+}
+
+.music-player button.active{
+    background-color: ivory;
 }
 
 .music-player button{
@@ -439,6 +490,7 @@ section.skills{
 /* TABLE */
 
 .table{
+    padding: 20px;
     width: 100%;
     text-align: center;
     margin: 0px;
@@ -456,6 +508,8 @@ section.skills{
     padding: 10px;
     /* width: inherit; */
     border: 1px solid #62cdd3;
+    border-right: 0px;
+    border-left: 0px;
 } 
 
 @media screen and (max-width: 320px) {
@@ -511,6 +565,90 @@ hr{
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.281);
+    background-color: rgba(255, 255, 255, 0.13);
 }
 
+/* SKILL TOOLTIP */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color:  rgba(0, 0, 0, 0.829) ;
+    color: rgba(76, 228, 233, 0.918);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px rgba(51, 169, 173, 0.918);
+   
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } 
+  
+  /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+/* TOP-ARROW */
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 10%;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  rgba(51, 169, 173, 0.918) transparent transparent transparent;
+  }
+  
+
+
+  /* FORM */
+
+  form{
+      padding: 15px;
+      border-radius: 10px;
+  }
+
+  input[type=text],
+  textarea{
+      background-color: transparent;
+      padding: 10px;
+      width: 100%;
+      color: #6ce1e7;
+      border-radius: 9px;
+      border: 1px solid white;
+      margin-top: 5px;
+  }
+
+  input[type=text]::placeholder{
+      color: #6ce1e73b;
+  }
+
+  label{
+    margin-top:25px;
+    display:inline-block; 
+  }
+
+  .btn-send{
+      margin-top: 10px;
+      padding: 13px;
+      border-radius: 10px;
+      border: 0px;
+      width: 100%;
+      color: rgb(179, 120, 202);
+      background-color: #59c8d6;
+      text-align: center;
+      transition: 500ms;
+  }
+
+  .btn-send:hover{
+      background-color: rgb(179, 120, 202);
+      color: #59c8d6;
+  }
