@@ -12,13 +12,21 @@
 
                     <h1>Enviar un mensaje</h1>
 
-                    <form action="" method="post">
+                    <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Nombre" required autocomplete="off"/>
+                            <input type="text" name="name" placeholder="Nombre" #name="ngModel" [(ngModel)]="messageModel.name" required autocomplete="off"/>
+                            <span class="form_error" *ngIf="name.touched && !name.valid">
+                                El nombre no es válido.
+                            </span>
                         </div>
                         <div class="form-group">
                             <label class="left" for="message">Mensaje</label>
-                            <textarea name="message" cols="30" rows="10" required></textarea>
+                            <textarea name="message" cols="30" rows="10" #message="ngModel" [(ngModel)]="messageModel.message" required></textarea>
+
+                            <span class="form_error" *ngIf="message.touched && !message.valid">
+                                El contenido no es válido.
+                            </span>
+
                         </div>
                         
                         <button  class="btn-send" type="submit">

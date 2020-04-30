@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 //para las rutas
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -34,7 +37,9 @@ import { MusicComponent } from './components/music/music.component';
     BrowserModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    routing
+    routing,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

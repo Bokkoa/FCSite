@@ -193,6 +193,11 @@ export class SkillsComponent implements OnInit {
         image: '../../../assets/images/icons/tailwindcss.png',
         level: 'skill-red'
       },
+	   {
+        name: 'SASS',
+        image: '../../../assets/images/icons/sass.png',
+        level: 'skill-blue'
+      },
       {
         name: 'Materialize CSS',
         image: '../../../assets/images/icons/materializecss.png',
@@ -201,6 +206,11 @@ export class SkillsComponent implements OnInit {
       {
         name: 'GraphQL',
         image: '../../../assets/images/icons/graphql.png',
+        level: 'skill-red'
+      },
+	   {
+        name: 'Progressive Web Applications',
+        image: '../../../assets/images/icons/pwa.png',
         level: 'skill-red'
       },
     ];
