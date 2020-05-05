@@ -32,26 +32,27 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form){
+    console.log("El modelo: ");
+    console.log(this.messageModel);
+
     this._messageService.saveMessage(this.messageModel).subscribe(
       res => {
-        if(res == true){
-          swal('Listo!', 
-                'Registro enviado con exito',
-                'success');
+        if(res.status === '200'){
+          swal({title: 'Listo!', 
+                text:'Registro enviado con exito',
+                icon:'success'});
           form.reset();
         }
         else{
-          console.log("Respuesta: ");
-          console.log(res);
-          swal('Oops!', 
-          'Hubo un error al realizar la peticion',
-          'error');
+          swal({title:'Oops!', 
+          text: 'Hubo un error al realizar la peticion',
+          icon: 'error'});
         }
       },
       err => {
-        swal('Oops!', 
-          'Algo salio mal :(',
-          'error');
+        swal({title: 'Oops!', 
+          text: 'Algo salio mal :(',
+          icon: 'error'});
         console.log(err);
       }
     )

@@ -646,9 +646,58 @@ hr{
       background-color: #59c8d6;
       text-align: center;
       transition: 500ms;
+      cursor: pointer;
   }
 
   .btn-send:hover{
       background-color: rgb(179, 120, 202);
       color: #59c8d6;
   }
+
+  /* CUSTOM SWALS */
+
+.swal-modal{
+    background-color: black;
+    border: 3px solid #59c8d6;
+}
+
+.swal-modal .swal-title,
+.swal-modal .swal-text{
+    color: #59c8d6
+}
+
+/* SWAL SUCCESS */
+
+.swal-icon .swal-icon--success,
+.swal-icon--success:before,
+.swal-icon--success:after,
+.swal-icon--success__hide-corners
+{
+    background-color: black;
+}
+
+/* SWAL ERROR */
+
+.swal-icon .swal-icon--error,
+.swal-icon--error:before,
+.swal-icon--error:after,
+.swal-icon--error__hide-corners
+{
+    background-color: black;
+}
+
+
+/* SWAL BUTTON */
+
+
+.swal-button{
+    background-color: black !important;
+    color: #59c8d6 !important;
+    border: 1px solid #59c8d6;
+    transition: all 300ms;
+}
+
+.swal-button:not([disabled]):hover{
+    color: black !important;
+    background-color: #59c8d6 !important;
+}

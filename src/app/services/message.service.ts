@@ -22,7 +22,7 @@ export class MessageService {
             name: message.name,
             message: message.message
         };
-        
+        console.log("En el servicio: ");
         console.log(params);
         // let headers = new HttpHeaders().set('Content-Type', 'application/json');
         let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
