@@ -47,7 +47,6 @@ Thumbs.db
 
 
 # firebase
-google-services.json
 .firebaserc
 firebase.json
-/.firebase
+.firebase/
