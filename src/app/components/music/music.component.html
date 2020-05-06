@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <p>Está sonando <span class="song"></span></p>
+        <p>Está sonando <span class="song">{{songName}}</span></p>
     </div>
 
     <div class="card-body music-player">
@@ -16,5 +16,9 @@
                 (click)="stopMusic()"  > 
             <fa-icon [icon]="faStop"></fa-icon> 
         </button>
+
+        <button (click)="changeMusic()"  > 
+    <fa-icon [icon]="faAngleDoubleRight"></fa-icon> 
+</button>
     </div>
 </div>

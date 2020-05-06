@@ -29,6 +29,10 @@ body{
 
 }
 
+.show{
+    display: block !important;
+}
+
 #content{
     margin-bottom: 60px;
 }
@@ -98,6 +102,22 @@ body{
 |Navbar  |
 +========+
 */
+
+.btn-dropdown{
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(106, 240, 240);
+    background-color: black; 
+    border-radius: 9px;
+    border: 0px solid white;
+    transition: all 300ms;
+    display: none;
+}
+
+.btn-dropdown:focus{
+    color: black;
+    background-color: rgba(106, 240, 240, 0.411); 
+}
 
 #navmenu{
     position: fixed;
@@ -385,7 +405,7 @@ body{
         background-color:  rgba(0, 0, 0, 0);
     }
     to{
-        background-color: #000000c0;
+        background-color: #000000da;
     }
 }
 
@@ -401,12 +421,29 @@ body{
     padding: 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
 }
+.about-me p{
+    padding: 5px;
+    color: white;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.about-me h3{
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: white;
+    color: rgb(17, 150, 173);
+}
+
+.about-me p strong{
+    color: rgb(86, 230, 255);
+}
 
 footer{
     width: 100%;
     flex-shrink: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: fixed;
     bottom: 0;
     color: white;
@@ -418,6 +455,11 @@ footer a{
     cursor: pointer;
 }
 
+footer p{
+    margin-bottom: 0px;
+    margin-top: 2px;
+    padding-left: 10px;
+}
 
 /* MUSIC PLAYER */
 
@@ -459,7 +501,7 @@ footer a{
 /* JUMBOTRON */
 .jumbotron{
     position: fixed;
-    padding: 200px;
+    padding-top: 200px;
     min-height: 900px;
     color: white;
     font-weight: bold;
@@ -700,4 +742,140 @@ hr{
 .swal-button:not([disabled]):hover{
     color: black !important;
     background-color: #59c8d6 !important;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 901px) {
+    .jumbo-header{
+        font-size: 90px;
+    }
+  }
+  
+  @media screen and (max-width: 875px) {
+    .jumbo-body{
+        font-size: 26px;
+          }
+    }
+
+    
+  @media screen and (max-width: 851px) {
+    .jumbo-header{
+        font-size: 80px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 672px){
+    
+    .nav-item, #logo{
+        display: inline-block;
+    }
+      /* FOR DATAGRID */
+  
+   .container, .row, .container-fluid{
+    padding: 0px;
+    margin: 0px;
+ }
+
+ .container-fluid.row{
+     margin-top: 100px;
+ }
+
+
+    /* SKILLS */
+    .skill-list{
+        box-sizing: unset;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .list-item-skill{
+       width: 45px;
+       margin-left: 6px;
+       margin-right: -2px;
+    }
+    .skill-icon{
+        width: 45px;
+        height: 45px;
+    }
+    
+
+
+    /* NAV */
+    #navemnu{
+        line-height: 0px;
+        padding: 0px !important;
+    }
+    #navmenu li{
+        float: none;
+        display: none;
+        line-height: 30px;
+        padding: 0px;
+    }
+    #navmenu #logo{
+        display: none;
+        float: none;
+        border-bottom: 1px solid #59c7d662;
+    }
+    #navmenu #logo img{
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+    }
+    #navmenu #brand{
+        float: none;
+    }
+
+    .btn-dropdown{
+        display: inline-block;
+    }
+  }
+  @media screen and (max-width: 414px) {
+
+    .jumbotron{
+        padding-top: 90px;
+    }
+    .jumbo-header{
+        font-size: 70px;
+    }
+
+    .jumbo-body{
+        font-size: 20px;
+    }
+  
+}
+
+  @media screen and (max-width: 375px) {
+
+    .jumbotron{
+        padding-top: 100px;
+    }
+    .jumbo-header{
+        font-size: 60px;
+    }
+
+    .jumbo-body{
+        font-size: 15px;
+    }
+  
+}
+
+@media screen and (max-width: 320px) {
+
+    .jumbotron{
+        padding-top: 100px;
+    }
+    .jumbo-header{
+        font-size: 55px;
+    }
+
+    .jumbo-body{
+        font-size: 15px;
+    }
+  
 }

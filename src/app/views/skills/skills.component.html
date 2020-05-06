@@ -55,8 +55,8 @@
 
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Lenguajes</h4>
-                            <ul class="skill-list" *ngFor="let skill of LanguageSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of LanguageSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}
@@ -70,8 +70,8 @@
 
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Bases de datos</h4>
-                            <ul class="skill-list" *ngFor="let skill of DbSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of DbSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}
@@ -87,8 +87,8 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Frameworks Web</h4>
-                            <ul class="skill-list" *ngFor="let skill of WebFrameworksSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of WebFrameworksSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}
@@ -100,8 +100,8 @@
 
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Librerías y básicos</h4>
-                            <ul class="skill-list" *ngFor="let skill of BasicsAndLibrarysSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of BasicsAndLibrarysSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}
@@ -119,8 +119,8 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Sistemas operativos</h4>
                             
-                            <ul class="skill-list" *ngFor="let skill of OSSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of OSSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}
@@ -134,8 +134,8 @@
                         <div class="col-lg-6 col-md-6 col-sm-12skill-list">
                             <h4 class="subheader">Extras</h4>
                             
-                            <ul class="skill-list" *ngFor="let skill of ExtraSkills">
-                                <li class="list-item-skill">
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of ExtraSkills">
                                     <div class="tooltip">
                                         <span class="tooltiptext">{{skill.name}}</span>
                                         <img class="skill-icon {{skill.level}}" src={{skill.image}}

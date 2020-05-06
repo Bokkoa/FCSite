@@ -1,16 +1,24 @@
 <nav class="navbar">
-    <ul id="navmenu" [ngClass]="{'bg-dark':_router.url != '/'}">
+    <ul id="navmenu" [ngClass]="{'bg-dark':_router.url != '/ansuz'}">
+    <button class="btn-dropdown" (click)="displayDropdown()"> 
+        <fa-icon [icon]="faBars"></fa-icon> 
+    </button>
+
         <div id="logo">
             <img src="assets/images/logo.png" alt="koonejos" class="logo-mg">
             <span id="brand">
-                <strong>F</strong>elipe
-                <strong>C</strong>ruz
+                <strong style="color: #6ce1e7;">
+                    F</strong>elipe
+                <strong style="color: #6ce1e7;">
+                    C</strong>ruz
             </span>
         </div>
         <li class="nav-item"><a [routerLink]="['contact']" [routerLinkActive]="['active']" >Contacto</a></li>
         <li class="nav-item"><a [routerLink]="['skills']" [routerLinkActive]="['active']" >Habilidades</a></li>
-        <li class="nav-item"><a [routerLink]="['home']" [routerLinkActive]="['active']" >Inicio</a></li>
+        <li class="nav-item"><a [routerLink]="['home']" [routerLinkActive]="['active']" >Sobre mí</a></li>
+        
     </ul>
+   
 </nav>
 
 <div class="clearfix"></div>

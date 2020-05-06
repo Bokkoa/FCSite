@@ -15,7 +15,6 @@ export class AppComponent implements OnInit{
   title = 'fcsite';
 
   constructor(public _router: Router){
-
   }
 
   ngOnInit(): void {
@@ -43,7 +42,6 @@ export class AppComponent implements OnInit{
          pathname = window.location.pathname; 
        });
     });
-
 
   }
 

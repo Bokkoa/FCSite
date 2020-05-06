@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faPlay, faPause, faStop } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faStop, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-music',
@@ -11,22 +11,42 @@ export class MusicComponent implements OnInit {
 
   public player: any;
 
+  public songName: string;
   public status: string;
+  public pathFile: string;
 
   faPlay = faPlay;
   faPause = faPause;
   faStop = faStop;
+  faAngleDoubleRight = faAngleDoubleRight;
 
   constructor() { 
-    this.player = new Audio('../../../assets/music/BraveNewWorld.mp3');
-    console.log(this.player);
+    this.pathFile = "../../../assets/music/";
+    this.player = new Audio(this.pathFile + 'BraveNewWorld.mp3');
     this.status = 'pl';
+    this.songName = "BraveNewWorld";
+    this.player.play();
+
   }
 
   ngOnInit(): void {
     // this.playMusic();
   }
 
+  changeMusic(){
+    this.player.pause();
+    if(this.songName === "BraveNewWorld")
+    {
+      this.player = new Audio(this.pathFile + 'MiamiSky.mp3');
+      this.status = 'pl';
+      this.songName = "MiamiSky";
+    }else{
+      this.player = new Audio(this.pathFile + 'BraveNewWorld.mp3');
+      this.status = 'pl';
+      this.songName = "BraveNewWorld";
+    }
+    this.player.play();
+  }
   stopMusic()
   {
     this.player.pause();
