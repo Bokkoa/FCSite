@@ -1,9 +1,14 @@
-<div class="card">
+<div class="card music-card">
     <div class="card-header">
-        <p>Está sonando <span class="song">{{songName}}</span></p>
+        <p>Está sonando</p>
     </div>
 
     <div class="card-body music-player">
+        <p>
+            <span class="song">{{songName}}</span>
+        </p>
+        <br>
+
         <button [ngClass]="{ 'active': status == 'pl'}" 
                 (click)="playMusic()" > 
             <fa-icon [icon]="faPlay"></fa-icon> 

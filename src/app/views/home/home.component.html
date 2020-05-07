@@ -1,53 +1,69 @@
 <div class="container content-center">
 
-    <div class="card col-12 col-lg-12">
-        <div class="card-header">
-            <h1 class="header">
+    <!-- <h1 class="header">
                 Jesús Felipe Cruz Navarro
-            </h1>
-        </div>
-        <div class="card-body">
-            <section class="about-me">
-                <p>
-                    Neófito del conocimiento, aficionado del cyberpunk y el synthwave.
-                </p>
-                <br>
-                <p>
-                    Mexicano, budista, ingeniero informático 
-                    y de temperamento fuerte.
-                </p>
-                <br>
+            </h1> -->
+    <section class="about-me">
+
+        <section class="row">
+
+            <div class="col-12">
                 <h3>¿Quién soy?</h3>
-                <p> 
-                    Egresé de la carrera de ingeniería informática el 2019,
-                   
-                   
+            </div>
+            <div class="col-12">
+                <p>
+                    Entusiasta del conocimiento, aficionado del cyberpunk y el synthwave.
+                    Mexicano, budista, ingeniero informático
+                    y de voluntad fuerte.
                 </p>
                 <p>
-                    ¿Es correcto lo que uno hace? 
+                    ¿Es correcto lo que uno hace?
                     ¿Es necesario hacer las cosas al pie de la letra? A veces sí, a veces no.
-                    Entre tanto cuestionamiento siempre hay algo que es escencial y cierto,
+                </p>
+                <p>
+                    Al final hay algo que es escencial y cierto,
                     las cosas deben hacerse mientras no afectes a alguien más.
                 </p>
+            </div>
+        </section>
 
+        <section class="row">
+
+            <div class="col-12">
                 <h3>Mi formación</h3>
+            </div>
+
+            <div class="col-12">
                 <p>
-                    En la universidad aprendí
-                    especialmente 
-                    <strong>programación básica, lenguaje c, c++ y c#, estructuras de datos, 
-                        bases de datos y administracion de servidores</strong>
-                    las buenas prácticas llegaron después, 
-                    a mediados de la universidad comencé a estudiar más por mi cuenta
-                    y no solo aprender lo que los profesores enseñaban.
-                    Comence a estudiar programacion básica en distintos lenguajes
+                    Egresé de la carrera de ingeniería informática el 2019, de la Universidad de Guadalajara.
+                </p>
+                <p>
+                    Ahí aprendí
+                    <strong>programación básica, lenguaje C, C++ y C#, estructuras de datos,
+                        bases de datos y administracion de servidores.</strong>
+                </p>
+                <p>
+                    En ese lapso investigué por mi cuenta en vez de
+                    solo aprender lo que la universidad ofrecía.
+                    Aprendí los fundamentos de
                     <strong>Python, Javascript, PHP, Ruby</strong> por mencionar algunos.
                 </p>
                 <p>
-                    A finales de la universidad tenia conocimientos básicos de los MVC, así comencé
-                    el desarrollo web con frameworks, siendo <strong>Laravel y Django</strong> mis comienzos.
+                    A finales de la universidad tenia conocimientos en algoritmia
+                    y las nociones de los frameworks MVC,
+                    fue así entonces que dominaba lo basico del
+                    desarrollo web con <strong>Laravel y Django</strong>.
                 </p>
+            </div>
+        </section>
 
+        <section class="row">
+
+            <div class="col-12">
                 <h3>Manos a la obra</h3>
+            </div>
+
+            <div class="col-12">
                 <p>
                     Comenzando en junio del 2019, ingrese a Continental como soporte de aplicaciones
                     terminando mi estancia ahi, el 30 de abril del 2020.
@@ -57,17 +73,29 @@
                     ahi, desarrollé una aplicación con <strong> VueJS y Laravel</strong> lo que me
                     llevó a estudiar frameworks de programación reactiva <strong>Angular y ReactJS</strong>.
                 </p>
+            </div>
+        </section>
 
+        <section class="row" style="margin-bottom: 150px;">
+            <div class="col-12">
                 <h3>¿Y ahora qué?</h3>
-                <p>
-                    El desarrollo web no fue lo unico que me produce interes.
-                    Con bases de la universidad en la actualidad, estudio por mi cuenta
-                    ramas de la informática como <strong>Inteligencia artificial y Ciberseguridad</strong>
-                    también, en el desarrollo, aprendo herramientas de devops como <strong>Dockers</strong>
-                    y en cuanto a desarrollo arquitecturas de <strong>PWA</strong>.
-                </p>
-            </section>
-        </div>
-    </div>
+            </div>
 
+            <div class="col-12">
+                <p>
+                    Actualmente estudio por mi cuenta temas que me gustan como
+                    <strong>Inteligencia artificial
+                    </strong> y<strong>Ciberseguridad</strong>
+                    también, en el desarrollo, aprendo herramientas de devops como <strong>Dockers</strong>
+                    y <strong>Jenkins</strong>.
+                </p>
+            </div>
+
+            <a class="btn-skills" [routerLink]="['/skills']">
+                <fa-icon [icon]="faArrowRight"></fa-icon>
+            </a>
+        </section>
+
+
+    </section>
 </div>

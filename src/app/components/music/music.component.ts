@@ -24,7 +24,7 @@ export class MusicComponent implements OnInit {
     this.pathFile = "../../../assets/music/";
     this.player = new Audio(this.pathFile + 'BraveNewWorld.mp3');
     this.status = 'pl';
-    this.songName = "BraveNewWorld";
+    this.songName = "Brave New World";
     this.player.play();
 
   }
@@ -35,15 +35,15 @@ export class MusicComponent implements OnInit {
 
   changeMusic(){
     this.player.pause();
-    if(this.songName === "BraveNewWorld")
+    if(this.songName === "Brave New World")
     {
       this.player = new Audio(this.pathFile + 'MiamiSky.mp3');
       this.status = 'pl';
-      this.songName = "MiamiSky";
+      this.songName = "Miami Sky";
     }else{
       this.player = new Audio(this.pathFile + 'BraveNewWorld.mp3');
       this.status = 'pl';
-      this.songName = "BraveNewWorld";
+      this.songName = "Brave New World";
     }
     this.player.play();
   }

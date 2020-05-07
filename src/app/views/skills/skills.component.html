@@ -99,6 +99,27 @@
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
+                            <h4 class="subheader">Desarrollo móvil</h4>
+                            <ul>
+                                <li class="list-item-skill" *ngFor="let skill of MobileDevelopmentSkills">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext">{{skill.name}}</span>
+                                        <img class="skill-icon {{skill.level}}" src={{skill.image}}
+                                            alt={{skill.name}} />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        
+
+                    </div> <!-- FIN DE ROW 2-->
+
+
+                    <!-- ROW 3 -->
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Librerías y básicos</h4>
                             <ul>
                                 <li class="list-item-skill" *ngFor="let skill of BasicsAndLibrarysSkills">
@@ -111,11 +132,7 @@
                             </ul>
                         </div>
 
-                    </div> <!-- FIN DE ROW 2-->
 
-
-                    <!-- ROW 3 -->
-                    <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Sistemas operativos</h4>
                             
@@ -131,7 +148,12 @@
                           
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12skill-list">
+                    </div> <!-- FIN DE ROW 3-->
+
+
+                    <!-- ROW 4 -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 skill-list">
                             <h4 class="subheader">Extras</h4>
                             
                             <ul>
@@ -145,8 +167,7 @@
                             </ul>
 
                         </div>
-                    </div> <!-- FIN DE ROW 3-->
-
+                    </div>
                 </div>
 
             </section>

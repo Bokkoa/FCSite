@@ -13,6 +13,7 @@ export class SkillsComponent implements OnInit {
   LanguageSkills = [];
   DbSkills = [];
   WebFrameworksSkills = [];
+  MobileDevelopmentSkills = [];
   BasicsAndLibrarysSkills = [];
   OSSkills = [];
   ExtraSkills = [];
@@ -77,6 +78,16 @@ export class SkillsComponent implements OnInit {
         name: 'JavaScript',
         image: '../../../assets/images/icons/javascript.png',
         level: 'skill-green'
+      },
+      {
+        name: 'Dart',
+        image: '../../../assets/images/icons/dart.png',
+        level: 'skill-red'
+      },
+      {
+        name: 'Perl',
+        image: '../../../assets/images/icons/perl.png',
+        level: 'skill-red'
       },
      ];
 
@@ -154,6 +165,25 @@ export class SkillsComponent implements OnInit {
       },
     ];
     
+
+    //MOBILE
+    this.MobileDevelopmentSkills = [
+      {
+        name: 'Ionic',
+        image: '../../../assets/images/icons/ionic.png',
+        level: 'skill-red'
+      },
+      {
+        name: 'Android Studio',
+        image: '../../../assets/images/icons/androidstudio.png',
+        level: 'skill-red'
+      },
+      {
+        name: 'Flutter',
+        image: '../../../assets/images/icons/flutter.png',
+        level: 'skill-red'
+      }
+    ];
 
     //LIBRARYS AND BASICS
 
@@ -268,6 +298,11 @@ export class SkillsComponent implements OnInit {
         name: 'Visual Studio',
         image: '../../../assets/images/icons/visualstudio.png',
         level: 'skill-green'
+      },
+      {
+        name: 'Firebase',
+        image: '../../../assets/images/icons/firebase.png',
+        level: 'skill-red'
       },
     ];
   }

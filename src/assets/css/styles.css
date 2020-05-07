@@ -9,10 +9,24 @@ gris oscuro: #b0acb0 */
 |GENERAL |
 +========+
 */
+@font-face {
+    font-family: "Orbitron";
+    src: url("../fonts/Orbitron-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "MiriamLibre";
+    src: url("../fonts/MiriamLibre-Regular.ttf");
+  }
 *, *::after,
 *::before{
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-family: "MiriamLibre";
 }
 
 body{
@@ -32,6 +46,7 @@ body{
 .show{
     display: block !important;
 }
+
 
 #content{
     margin-bottom: 60px;
@@ -105,7 +120,7 @@ body{
 
 .btn-dropdown{
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(106, 240, 240);
     background-color: black; 
     border-radius: 9px;
@@ -125,7 +140,7 @@ body{
     top: 0;
     width: 100%;
     float: left;
-    line-height: 85px;
+    line-height: 55px;
     font-size: 22px;
     padding: 10px;
     /* background-color:  rgb(67, 139, 206); */
@@ -142,7 +157,7 @@ body{
     display: block;
     float: left;
     max-height: 85px;
-    width: 80px;
+    width: 50px;
     margin-top: -4px;
   
     animation: pulse-blue infinite 1s linear;
@@ -372,6 +387,18 @@ body{
     }
 }
 
+@keyframes text-neon-pulse{
+    0%{
+        color:rgb(86, 230, 255);
+    }
+    50%{
+        color:rgb(255, 129, 213);
+    }
+    100%{
+        color:rgb(86, 230, 255);
+    }
+}
+
 @keyframes bg-neon-pulse{
     0%{
         /* background: rgb(255, 129, 213); */
@@ -416,27 +443,50 @@ body{
 
 
 /* ABOUT ME SECTION */
+
+
+
 .about-me{
     font-size: 15px;
     padding: 20px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
 }
 .about-me p{
     padding: 5px;
     color: white;
-    text-align: justify;
-    font-size: 16px;
+    text-align: center;
+    font-size: 30px;
 }
 
 .about-me h3{
+    text-align: center;
     padding-top: 15px;
     padding-bottom: 5px;
-    color: white;
     color: rgb(17, 150, 173);
+    font-size: 300%;
+    animation: text-neon-pulse 5s infinite;
+}
+.about-me .row{
+    margin-bottom: 400px;
 }
 
 .about-me p strong{
     color: rgb(86, 230, 255);
+}
+
+.header{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.btn-skills{
+    text-align: center;
+    width: 50px;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    animation: text-neon-pulse 10s infinite;
+    margin-left: 45%;
 }
 
 footer{
@@ -463,9 +513,19 @@ footer p{
 
 /* MUSIC PLAYER */
 
+.music-card{
+    position: fixed;
+    width: 170px;
+    right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 .music-player{
+
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     /* margin-top: 10px;
     border: 2px solid rgb(86, 230, 255);
@@ -477,8 +537,19 @@ footer p{
     /* animation: border-neon-pulse 2s infinite; */
 }
 
-.music-player button.active{
-    background-color: ivory;
+.song{
+    padding: 2px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    animation: text-neon-pulse 2s infinite;
+}
+
+.music-player button.active, 
+.music-player button:hover,
+.music-player button:focus{
+    background-color: rgb(9, 101, 117);
+    border: 0px;
+    outline:0;
 }
 
 .music-player button{
@@ -549,8 +620,9 @@ section.skills{
     margin: 0px;
     padding: 10px;
     /* width: inherit; */
-    border: 1px solid #62cdd3;
+    border: 2px solid #62cdd3;
     border-right: 0px;
+    border-top: 0px;
     border-left: 0px;
 } 
 
@@ -749,7 +821,15 @@ hr{
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 901px) {
+@media screen and (max-width: 954px) {
+    .music-card{
+        width: 130px;
+        font-size: 20px;
+    }
+    .song{
+        font-size: 15px;
+    }
+    
     .jumbo-header{
         font-size: 90px;
     }
@@ -760,8 +840,8 @@ hr{
         font-size: 26px;
           }
     }
+  
 
-    
   @media screen and (max-width: 851px) {
     .jumbo-header{
         font-size: 80px;
@@ -769,63 +849,83 @@ hr{
 
   }
 
+  @media screen and (max-width: 827px) {
+
+    .list-item-skill{
+        margin: 2px;
+    }
+}
+  @media screen and (max-width: 767px) {
+
+    .music-card{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        right: 0;
+    }
+    .song{
+        font-size: 20px;
+    }
+
+         /* FOR DATAGRID */
+  
+         .container, .row, .container-fluid{
+            padding: 0px;
+            margin: 0px;
+            max-width: 100%;
+        }
+    
+        .container-fluid.row{
+            margin-top: 100px;
+        }
+    
+        /* SKILLS */
+        .skill-list{
+            box-sizing: unset;
+            margin: 0px;
+            padding: 5px;
+        }
+    
+        .list-item-skill{
+           width: 45px;
+           margin-left: 6px;
+           margin-right: -2px;
+        }
+        .skill-icon{
+            width: 45px;
+            height: 45px;
+        }
+    
+        
+
+  }
 
   @media screen and (max-width: 672px){
-    
+
+      /* NAV */
     .nav-item, #logo{
         display: inline-block;
     }
-      /* FOR DATAGRID */
-  
-   .container, .row, .container-fluid{
-    padding: 0px;
-    margin: 0px;
- }
 
- .container-fluid.row{
-     margin-top: 100px;
- }
-
-
-    /* SKILLS */
-    .skill-list{
-        box-sizing: unset;
-        margin: 0px;
-        padding: 5px;
+    .navbar #navmenu{
+      line-height: 60px;
     }
-
-    .list-item-skill{
-       width: 45px;
-       margin-left: 6px;
-       margin-right: -2px;
-    }
-    .skill-icon{
-        width: 45px;
-        height: 45px;
-    }
-    
-
-
-    /* NAV */
-    #navemnu{
-        line-height: 0px;
-        padding: 0px !important;
-    }
+ 
     #navmenu li{
         float: none;
         display: none;
-        line-height: 30px;
         padding: 0px;
     }
     #navmenu #logo{
+        margin-top: 15px;
         display: none;
         float: none;
         border-bottom: 1px solid #59c7d662;
     }
     #navmenu #logo img{
         width: 50px;
-        height: 50px;
-        margin-top: 10px;
+        height: 60px;
     }
     #navmenu #brand{
         float: none;
@@ -833,6 +933,7 @@ hr{
 
     .btn-dropdown{
         display: inline-block;
+        margin-left: 5px;
     }
   }
   @media screen and (max-width: 414px) {
@@ -851,6 +952,17 @@ hr{
 }
 
   @media screen and (max-width: 375px) {
+
+    #content.container-fluid{
+        margin-top: 84px !important;
+    }
+    .about-me{
+        animation: fade-background-dark;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        border-radius: 9px;
+        border: 1px solid white;
+    }
 
     .jumbotron{
         padding-top: 100px;
