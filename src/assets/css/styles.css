@@ -47,7 +47,9 @@ body{
     display: block !important;
 }
 
-
+.container{
+    margin-bottom: 20px;
+}
 #content{
     margin-bottom: 60px;
 }
@@ -207,7 +209,7 @@ body{
     width: 100%;
     justify-content: center;
     margin-top: 10px;
-    border: 2px solid rgb(86, 230, 255);
+    /* border: 2px solid rgb(86, 230, 255); */
     border-radius: 15px;
     padding: 0px;
     /* animation: border-neon-pulse 2s infinite; */
@@ -231,7 +233,7 @@ body{
     background: #000000c0;
     width: inherit;
     display: block;
-    color: rgb(106, 240, 240);
+    color: #b5ffff;
     border-radius:  0px  0px  15px  15px;
 }
 
@@ -565,9 +567,6 @@ footer p{
     margin: 1px;
 }
 
-.music-player button:hover{
-    border: 1px solid rgb(237, 101, 241);
-}
 
 /* JUMBOTRON */
 .jumbotron{

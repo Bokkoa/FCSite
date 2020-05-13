@@ -15,6 +15,7 @@ export class SkillsComponent implements OnInit {
   WebFrameworksSkills = [];
   MobileDevelopmentSkills = [];
   BasicsAndLibrarysSkills = [];
+  DevopsSkills = [];
   OSSkills = [];
   ExtraSkills = [];
   constructor() { 
@@ -163,6 +164,11 @@ export class SkillsComponent implements OnInit {
         image: '../../../assets/images/icons/angular.png',
         level: 'skill-green'
       },
+      {
+        name: '.NET Core',
+        image: '../../../assets/images/icons/dotnetcore.png',
+        level: 'skill-blue'
+      },
     ];
     
 
@@ -245,6 +251,18 @@ export class SkillsComponent implements OnInit {
       },
     ];
 
+    this.DevopsSkills = [
+      {
+        name: 'Docker',
+        image: '../../../assets/images/icons/docker.png',
+        level: 'skill-red'
+      },
+      {
+        name: 'Git',
+        image: '../../../assets/images/icons/git.png',
+        level: 'skill-blue'
+      },
+    ],
     this.OSSkills = [
       {
         name: 'Ubuntu (Server)',
