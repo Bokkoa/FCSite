@@ -73,6 +73,11 @@ export class SkillsComponent implements OnInit {
       {
         name: 'Golang',
         image: '../../../assets/images/icons/go.png',
+        level: 'skill-blue'
+      },
+      {
+        name: 'Kotlin',
+        image: '../../../assets/images/icons/kotlin.png',
         level: 'skill-red'
       },
       {
@@ -123,6 +128,11 @@ export class SkillsComponent implements OnInit {
         name: 'Mongo DB',
         image: '../../../assets/images/icons/mongodb.png',
         level: 'skill-green'
+      },
+      {
+        name: 'Pouch DB',
+        image: '../../../assets/images/icons/pouchdb.png',
+        level: 'skill-red'
       },
       
     ];
@@ -188,7 +198,12 @@ export class SkillsComponent implements OnInit {
         name: 'Flutter',
         image: '../../../assets/images/icons/flutter.png',
         level: 'skill-red'
-      }
+      },
+      {
+        name: 'Progressive Web Applications',
+        image: '../../../assets/images/icons/pwa.png',
+        level: 'skill-blue'
+      },
     ];
 
     //LIBRARYS AND BASICS
@@ -244,11 +259,7 @@ export class SkillsComponent implements OnInit {
         image: '../../../assets/images/icons/graphql.png',
         level: 'skill-red'
       },
-	   {
-        name: 'Progressive Web Applications',
-        image: '../../../assets/images/icons/pwa.png',
-        level: 'skill-red'
-      },
+	 
     ];
 
     this.DevopsSkills = [
