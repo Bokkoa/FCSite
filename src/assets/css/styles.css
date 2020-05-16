@@ -43,6 +43,39 @@ body{
 
 }
 
+.fade-anim{
+    animation: fade-transition 1s forwards;
+}
+
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    
+    /* WIDTH ERASE VERTICAL SCROLL */
+    width: 0px; 
+    /* HEIGHT ERASE HORIZONTAL SCROLL */
+    height: 0px; 
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 9px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: none; 
+    border-radius: 0px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: none; 
+  }
+
+
 .show{
     display: block !important;
 }
@@ -468,7 +501,7 @@ body{
     animation: text-neon-pulse 5s infinite;
 }
 .about-me .row{
-    margin-bottom: 400px;
+    margin-bottom: 600px;
 }
 
 .about-me p strong{

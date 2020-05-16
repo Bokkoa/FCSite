@@ -41,8 +41,13 @@ export class AppComponent implements OnInit{
       $(window).on('popstate', function(event) {
          pathname = window.location.pathname; 
        });
+
     });
 
+  }
+
+  onActivate(){
+    window.scroll(0, 0);
   }
 
   prepareRoute(outlet: RouterOutlet) {
