@@ -33,8 +33,11 @@ body{
     background: no-repeat;
 
     /* hex der */
-    background-image: linear-gradient( to right, rgb(0, 0, 0), rgba(12, 179, 209, 0.651) ), url('../images/bg2.jpg');
+    /* background-image: linear-gradient( to right, rgb(0, 0, 0), rgba(12, 179, 209, 0.651) ), url('../images/bg2.jpg'); */
+    background-image: linear-gradient( to right, rgb(0, 0, 0), rgba(0, 182, 214, 0.541)), url('../images/bg2.jpg');
    
+
+    color: rgba(0, 182, 214, 0.541);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -43,9 +46,6 @@ body{
 
 }
 
-.fade-anim{
-    animation: fade-transition 1s forwards;
-}
 
 
 /* SCROLLBAR */

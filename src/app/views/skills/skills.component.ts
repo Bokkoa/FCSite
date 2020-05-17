@@ -8,7 +8,10 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  
   faCircle = faCircle;
+
+  skillUrl = "../../../assets/images/icons/";
 
   LanguageSkills = [];
   DbSkills = [];
@@ -18,6 +21,7 @@ export class SkillsComponent implements OnInit {
   DevopsSkills = [];
   OSSkills = [];
   ExtraSkills = [];
+  
   constructor() { 
 
      //I DONT HAVE A BACKEND, SORRY
@@ -27,72 +31,72 @@ export class SkillsComponent implements OnInit {
      this.LanguageSkills = [
        {
          name: 'C sharp',
-         image: '../../../assets/images/icons/csharp.png',
+         image: this.skillUrl + 'csharp.png',
          level: 'skill-blue'
        },
        {
         name: 'PHP',
-        image: '../../../assets/images/icons/php.png',
+        image: this.skillUrl + 'php.png',
         level: 'skill-green'
       },
       {
         name: 'Ruby',
-        image: '../../../assets/images/icons/ruby.png',
+        image: this.skillUrl + 'ruby.png',
         level: 'skill-red'
       },
       {
         name: 'Python',
-        image: '../../../assets/images/icons/python.png',
+        image: this.skillUrl + 'python.png',
         level: 'skill-blue'
       },
       {
         name: 'C language',
-        image: '../../../assets/images/icons/c.png',
+        image: this.skillUrl + 'c.png',
         level: 'skill-blue'
       },
       {
         name: 'SWI Prolog',
-        image: '../../../assets/images/icons/swipl.png',
+        image: this.skillUrl + 'swipl.png',
         level: 'skill-blue'
       },
       {
         name: 'Java',
-        image: '../../../assets/images/icons/java.png',
+        image: this.skillUrl + 'java.png',
         level: 'skill-red'
       },
       {
         name: 'C++',
-        image: '../../../assets/images/icons/cpp.png',
+        image: this.skillUrl + 'cpp.png',
         level: 'skill-green'
       },
       {
         name: 'R language',
-        image: '../../../assets/images/icons/r.png',
+        image: this.skillUrl + 'r.png',
         level: 'skill-red'
       },
       {
         name: 'Golang',
-        image: '../../../assets/images/icons/go.png',
+        image: this.skillUrl + 'go.png',
         level: 'skill-blue'
       },
       {
         name: 'Kotlin',
-        image: '../../../assets/images/icons/kotlin.png',
+        image: this.skillUrl + 'kotlin.png',
         level: 'skill-red'
       },
       {
         name: 'JavaScript',
-        image: '../../../assets/images/icons/javascript.png',
+        image: this.skillUrl + 'javascript.png',
         level: 'skill-green'
       },
       {
         name: 'Dart',
-        image: '../../../assets/images/icons/dart.png',
+        image: this.skillUrl + 'dart.png',
         level: 'skill-red'
       },
       {
         name: 'Perl',
-        image: '../../../assets/images/icons/perl.png',
+        image: this.skillUrl + 'perl.png',
         level: 'skill-red'
       },
      ];
@@ -101,37 +105,37 @@ export class SkillsComponent implements OnInit {
      this.DbSkills = [
       {
         name: 'MySql',
-        image: '../../../assets/images/icons/mysql.png',
+        image: this.skillUrl + 'mysql.png',
         level: 'skill-green'
       },
       {
         name: 'PostgreSQL',
-        image: '../../../assets/images/icons/postgresql.png',
+        image: this.skillUrl + 'postgresql.png',
         level: 'skill-red'
       },
       {
         name: 'MS SQL Server',
-        image: '../../../assets/images/icons/sqlserver.png',
+        image: this.skillUrl + 'sqlserver.png',
         level: 'skill-green'
       },
       {
         name: 'SQLite',
-        image: '../../../assets/images/icons/sqlite.png',
+        image: this.skillUrl + 'sqlite.png',
         level: 'skill-blue'
       },
       {
         name: 'Oracle DB',
-        image: '../../../assets/images/icons/oracle.png',
+        image: this.skillUrl + 'oracle.png',
         level: 'skill-red'
       },
       {
         name: 'Mongo DB',
-        image: '../../../assets/images/icons/mongodb.png',
+        image: this.skillUrl + 'mongodb.png',
         level: 'skill-green'
       },
       {
         name: 'Pouch DB',
-        image: '../../../assets/images/icons/pouchdb.png',
+        image: this.skillUrl + 'pouchdb.png',
         level: 'skill-red'
       },
       
@@ -141,42 +145,42 @@ export class SkillsComponent implements OnInit {
     this.WebFrameworksSkills = [
       {
         name: 'Django',
-        image: '../../../assets/images/icons/django.png',
+        image: this.skillUrl + 'django.png',
         level: 'skill-blue'
       },
       {
         name: 'Laravel',
-        image: '../../../assets/images/icons/laravel.png',
+        image: this.skillUrl + 'laravel.png',
         level: 'skill-green'
       },
       {
         name: 'Flask',
-        image: '../../../assets/images/icons/flask.png',
+        image: this.skillUrl + 'flask.png',
         level: 'skill-blue'
       },
       {
         name: 'Node JS',
-        image: '../../../assets/images/icons/nodejs.png',
+        image: this.skillUrl + 'nodejs.png',
         level: 'skill-blue'
       },
       {
         name: 'Vue',
-        image: '../../../assets/images/icons/vuejs.png',
+        image: this.skillUrl + 'vuejs.png',
         level: 'skill-blue'
       },
       {
         name: 'React',
-        image: '../../../assets/images/icons/react.png',
+        image: this.skillUrl + 'react.png',
         level: 'skill-blue'
       },
       {
         name: 'Angular',
-        image: '../../../assets/images/icons/angular.png',
+        image: this.skillUrl + 'angular.png',
         level: 'skill-green'
       },
       {
         name: '.NET Core',
-        image: '../../../assets/images/icons/dotnetcore.png',
+        image: this.skillUrl + 'dotnetcore.png',
         level: 'skill-blue'
       },
     ];
@@ -186,22 +190,22 @@ export class SkillsComponent implements OnInit {
     this.MobileDevelopmentSkills = [
       {
         name: 'Ionic',
-        image: '../../../assets/images/icons/ionic.png',
+        image: this.skillUrl + 'ionic.png',
         level: 'skill-red'
       },
       {
         name: 'Android Studio',
-        image: '../../../assets/images/icons/androidstudio.png',
+        image: this.skillUrl + 'androidstudio.png',
         level: 'skill-red'
       },
       {
         name: 'Flutter',
-        image: '../../../assets/images/icons/flutter.png',
+        image: this.skillUrl + 'flutter.png',
         level: 'skill-red'
       },
       {
         name: 'Progressive Web Applications',
-        image: '../../../assets/images/icons/pwa.png',
+        image: this.skillUrl + 'pwa.png',
         level: 'skill-blue'
       },
     ];
@@ -211,52 +215,52 @@ export class SkillsComponent implements OnInit {
     this.BasicsAndLibrarysSkills = [
       {
         name: 'CSS3',
-        image: '../../../assets/images/icons/css3.png',
+        image: this.skillUrl + 'css3.png',
         level: 'skill-green'
       },
       {
         name: 'HTML5',
-        image: '../../../assets/images/icons/html5.png',
+        image: this.skillUrl + 'html5.png',
         level: 'skill-green'
       },
       {
         name: 'TypeScript',
-        image: '../../../assets/images/icons/typescript.png',
+        image: this.skillUrl + 'typescript.png',
         level: 'skill-green'
       },
       {
         name: 'Express',
-        image: '../../../assets/images/icons/express.png',
+        image: this.skillUrl + 'express.png',
         level: 'skill-blue'
       },
       {
         name: 'JQuery',
-        image: '../../../assets/images/icons/jquery.png',
+        image: this.skillUrl + 'jquery.png',
         level: 'skill-green'
       },
       {
         name: 'Bootstrap 4',
-        image: '../../../assets/images/icons/bootstrap.png',
+        image: this.skillUrl + 'bootstrap.png',
         level: 'skill-green'
       },
       {
         name: 'Tailwind CSS',
-        image: '../../../assets/images/icons/tailwindcss.png',
+        image: this.skillUrl + 'tailwindcss.png',
         level: 'skill-red'
       },
 	   {
         name: 'SASS',
-        image: '../../../assets/images/icons/sass.png',
+        image: this.skillUrl + 'sass.png',
         level: 'skill-blue'
       },
       {
         name: 'Materialize CSS',
-        image: '../../../assets/images/icons/materializecss.png',
+        image: this.skillUrl + 'materializecss.png',
         level: 'skill-red'
       },
       {
         name: 'GraphQL',
-        image: '../../../assets/images/icons/graphql.png',
+        image: this.skillUrl + 'graphql.png',
         level: 'skill-red'
       },
 	 
@@ -265,39 +269,39 @@ export class SkillsComponent implements OnInit {
     this.DevopsSkills = [
       {
         name: 'Docker',
-        image: '../../../assets/images/icons/docker.png',
+        image: this.skillUrl + 'docker.png',
         level: 'skill-red'
       },
       {
         name: 'Git',
-        image: '../../../assets/images/icons/git.png',
+        image: this.skillUrl + 'git.png',
         level: 'skill-blue'
       },
     ],
     this.OSSkills = [
       {
         name: 'Ubuntu (Server)',
-        image: '../../../assets/images/icons/ubuntu.png',
+        image: this.skillUrl + 'ubuntu.png',
         level: 'skill-red'
       },
       {
         name: 'Windows (Server)',
-        image: '../../../assets/images/icons/windows.png',
+        image: this.skillUrl + 'windows.png',
         level: 'skill-green'
       },
       {
         name: 'Tails OS',
-        image: '../../../assets/images/icons/tails.png',
+        image: this.skillUrl + 'tails.png',
         level: 'skill-blue'
       },
       {
         name: 'Debian (Server)',
-        image: '../../../assets/images/icons/debian.png',
+        image: this.skillUrl + 'debian.png',
         level: 'skill-green'
       },
       {
         name: 'Kali (Security)',
-        image: '../../../assets/images/icons/kali.png',
+        image: this.skillUrl + 'kali.png',
         level: 'skill-red'
       },
     ];
@@ -305,32 +309,32 @@ export class SkillsComponent implements OnInit {
     this.ExtraSkills = [
       {
         name: 'Unity (Games)',
-        image: '../../../assets/images/icons/unity.png',
+        image: this.skillUrl + 'unity.png',
         level: 'skill-blue'
       },
       {
         name: 'Blender (Games)',
-        image: '../../../assets/images/icons/blender.png',
+        image: this.skillUrl + 'blender.png',
         level: 'skill-green'
       },
       {
         name: 'Photoshop 2017',
-        image: '../../../assets/images/icons/photoshop.png',
+        image: this.skillUrl + 'photoshop.png',
         level: 'skill-blue'
       },
       {
         name: 'After Effects 2017',
-        image: '../../../assets/images/icons/aftereffects.png',
+        image: this.skillUrl + 'aftereffects.png',
         level: 'skill-blue'
       },
       {
         name: 'Visual Studio',
-        image: '../../../assets/images/icons/visualstudio.png',
+        image: this.skillUrl + 'visualstudio.png',
         level: 'skill-green'
       },
       {
         name: 'Firebase',
-        image: '../../../assets/images/icons/firebase.png',
+        image: this.skillUrl + 'firebase.png',
         level: 'skill-red'
       },
     ];
