@@ -18,16 +18,20 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
   
-  <app-navbar></app-navbar >
-    <div id="content" class="container-fluid row" style="margin-top: 120px;">                                    
+    <div id="content" class="container-fluid row">                   
+      
+      <div class="container col-lg-2 col-md-2 col-sm-12" [ngClass]="{'bg-dark':_router.url != '/'}" *ngIf="_router.url != '/'">
+        <app-navbar></app-navbar >
+      </div>
+      
                                                            <!--Para las animaciones del router-->
-      <div class="container col-lg-10 col-md-10 col-sm-12" [@triggerAnimation]="prepareRoute(outlet)">
+      <div class="container col-lg-10 col-md-12 col-sm-12" [@triggerAnimation]="prepareRoute(outlet)">
           <router-outlet #outlet="outlet" (activate)="onActivate()"></router-outlet>
       </div>
       
-      <div class="container col-lg-2 col-md-2 col-sm-12">
+      <!-- <div class="container col-lg-2 col-md-2 col-sm-12">
         <app-music *ngIf="_router.url != '/'"></app-music>
-      </div>
+      </div> -->
 
     </div>
   

@@ -1,29 +1,38 @@
 <div class="card music-card">
-    <div class="card-header">
-        <p>Está sonando</p>
-    </div>
 
-    <div class="card-body music-player">
-        <p>
+    <div class="music-player">
+        <p class="music-message">
+            Está sonando
             <span class="song">{{songName}}</span>
         </p>
+
         <br>
+        <div id="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="controls">
+            <button [ngClass]="{ 'active': status == 'pl'}" (click)="playMusic()">
+                <fa-icon [icon]="faPlay"></fa-icon>
+            </button>
+            <button [ngClass]="{'active': status == 'p'}" (click)="pauseMusic()">
+                <fa-icon [icon]="faPause"></fa-icon>
+            </button>
+            <button [ngClass]="{'active': status == 's'}" (click)="stopMusic()">
+                <fa-icon [icon]="faStop"></fa-icon>
+            </button>
 
-        <button [ngClass]="{ 'active': status == 'pl'}" 
-                (click)="playMusic()" > 
-            <fa-icon [icon]="faPlay"></fa-icon> 
-        </button>
-        <button   [ngClass]="{'active': status == 'p'}" 
-                  (click)="pauseMusic()" > 
-            <fa-icon [icon]="faPause"></fa-icon> 
-        </button>
-        <button [ngClass]="{'active': status == 's'}"
-                (click)="stopMusic()"  > 
-            <fa-icon [icon]="faStop"></fa-icon> 
-        </button>
-
-        <button (click)="changeMusic()"  > 
-    <fa-icon [icon]="faAngleDoubleRight"></fa-icon> 
-</button>
+            <button (click)="changeMusic()">
+                <fa-icon [icon]="faAngleDoubleRight"></fa-icon>
+            </button>
+        </div>
     </div>
 </div>

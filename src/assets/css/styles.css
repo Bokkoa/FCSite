@@ -117,7 +117,7 @@ body{
 .bg-dark{
     /* background: #000000c0 !important; */
     animation: fade-background-dark;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 
@@ -173,11 +173,19 @@ body{
     position: fixed;
     z-index: 2;
     top: 0;
-    width: 100%;
-    float: left;
+    width: 250px;
+    /* ON SIDE */
+    display: flex;
+    flex-direction: column;
+    /* ON TOP */
+    /* width: 100%; */
+    /* float: left; */
     line-height: 55px;
     font-size: 22px;
     padding: 10px;
+    height: 1000px;
+    overflow: hidden;
+    padding-top: 150px;
     /* background-color:  rgb(67, 139, 206); */
 }
 
@@ -201,14 +209,16 @@ body{
 #brand{
     display: block;
     margin: 0px;
-    float: left;
+    /* ON TOP */
+    /* float: left; */
     color: white;
 }
 
 #navmenu li{
     display: inline-block;
     list-style: none;
-    float: right;
+    /* ON TOP */
+    /* float: left; */
 }
 
 #navmenu li a{
@@ -219,6 +229,7 @@ body{
     margin-right: 10px;
     transition: all 300ms;
     font-size: 25px;
+
 }
 
 #navmenu li a:hover{
@@ -248,6 +259,8 @@ body{
     /* animation: border-neon-pulse 2s infinite; */
 }
 
+
+
 .card-header{
     background: #a9c5c780;
     padding-top: 15px;
@@ -263,12 +276,33 @@ body{
 }
 
 .card-body{
-    background: #000000c0;
+    /* background: #000000c0; */
     width: inherit;
     display: block;
     color: #b5ffff;
     border-radius:  0px  0px  15px  15px;
 }
+
+
+.card.horizontal{
+    background-color: none;
+}
+
+.card.horizontal .card-header{
+    width: 100%;
+    text-align: left;
+    background: none;
+    animation: none;
+}
+
+.card.horizontal .card-header .header{
+    text-align: left;
+    width: 100%;
+    font-size: 130px;
+}
+
+
+
 
 /*
 +============+
@@ -525,6 +559,7 @@ body{
 }
 
 footer{
+    z-index: 3;
     width: 100%;
     flex-shrink: 0;
     padding-top: 10px;
@@ -549,8 +584,11 @@ footer p{
 /* MUSIC PLAYER */
 
 .music-card{
-    position: fixed;
-    width: 170px;
+    /* FIXED */
+    /* position: fixed;
+    width: 170px; */
+
+    width: 100%;
     right: 5%;
     font-size: 20px;
     font-weight: bold;
@@ -568,14 +606,14 @@ footer p{
     justify-content: center;
     */
     padding: 20px; 
-    background: #000000c0;
     /* animation: border-neon-pulse 2s infinite; */
 }
 
 .song{
     padding: 2px;
+    margin-top: -25px;
+    display: block;
     border-radius: 9px;
-    margin-bottom: 5px;
     animation: text-neon-pulse 2s infinite;
 }
 
@@ -600,10 +638,55 @@ footer p{
     margin: 1px;
 }
 
+/* SOUND BARS ANIMATION */
+
+#bars {
+    height: 30px;
+    left: 50%;
+    margin: -30px 0 0 -20px;
+    position: relative;
+    top: 50%;
+    width: 40px;
+}
+
+.bar {
+   background: #666;
+    bottom: 1px;
+    height: 3px;
+    position: absolute;
+    width: 3px;      
+    animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 28px;        
+    }
+}
+
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.bar:nth-child(2)  { left: 5px; animation-duration: 433ms; }
+.bar:nth-child(3)  { left: 9px; animation-duration: 407ms; }
+.bar:nth-child(4)  { left: 13px; animation-duration: 458ms; }
+.bar:nth-child(5)  { left: 17px; animation-duration: 400ms; }
+.bar:nth-child(6)  { left: 21px; animation-duration: 427ms; }
+.bar:nth-child(7)  { left: 25px; animation-duration: 441ms; }
+.bar:nth-child(8)  { left: 29px; animation-duration: 419ms; }
+.bar:nth-child(9)  { left: 33px; animation-duration: 487ms; }
+.bar:nth-child(10) { left: 37px; animation-duration: 442ms; }
+
+
 
 /* JUMBOTRON */
 .jumbotron{
     position: fixed;
+    left: 0;
+    top: 10%;
     padding-top: 200px;
     min-height: 900px;
     color: white;
@@ -624,7 +707,10 @@ footer p{
 
 
 /* SECTIONS */
-
+.q-container{
+    margin-left: 0px;
+    margin-right: 30px;
+}
 section.skills{
     padding-top: 15px;
     justify-content: center;
@@ -635,10 +721,12 @@ section.skills{
 /* TABLE */
 
 .table{
-    padding: 20px;
-    width: 100%;
-    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    /* width: 100%; */
+    text-align: left;
     margin: 0px;
+	border-collapse: collapse;
 }
 
 .table tr{
@@ -652,10 +740,10 @@ section.skills{
     margin: 0px;
     padding: 10px;
     /* width: inherit; */
-    border: 2px solid #62cdd3;
-    border-right: 0px;
-    border-top: 0px;
-    border-left: 0px;
+    /* border: 2px solid #62cdd3; */
+    /* border-right: 0px; */
+    /* border-top: 0px; */
+    /* border-left: 0px; */
 } 
 
 @media screen and (max-width: 320px) {
@@ -700,8 +788,8 @@ hr{
 /* SKILLS */
 
 .skill-icon{
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
 }
 
 .list-item-skill{
@@ -711,7 +799,8 @@ hr{
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.13);
+    /* background-color: rgba(255, 255, 255, 0.13); */
+    background: #0000007e;
 }
 
 /* SKILL TOOLTIP */
@@ -853,7 +942,95 @@ hr{
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 954px) {
+@media screen and (max-width: 1444px){
+
+    .nav-item, #logo{
+        display: inline-block;
+    }
+
+    #bars{
+        display: none;
+    }
+    .music-player .music-message{
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
+        float: right;
+        font-size: 14px;
+        margin-right: 50px;
+    }
+
+    .music-message .song{
+        display: inline-block;
+        margin-top: 0px;
+    }
+
+    .music-player .controls{
+        float: right;
+        margin-right: 10px;
+        line-height: 55px;
+    }
+
+
+    #navmenu{
+        width: 100%;
+        float: left;
+        width: 100%;
+        display: block;
+        padding-top: 10px;
+        height: auto;
+    }
+
+    #navmenu hr, #navmenu br{
+        display: none;
+    }
+
+    #brand, #navmenu li {
+        float: left;
+    }
+    .container{
+        margin-top: 50px;
+        float: left;
+    }
+
+    .music-card{
+        margin-top: 0;
+    }
+
+    .music-player{
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+}
+@media screen and (max-width: 970px) {
+    .card.horizontal .card-header .header{
+        font-size: 80px;
+    }
+
+  
+    
+}
+@media screen and (max-width: 920px) {
+  
+
+    .music-card{
+        width: auto;
+        display: inline-block;
+    }
+
+    .music-player{
+        display: inline-block;
+        line-height: 30px;
+        margin-left: 80px;
+    }
+    .music-player .controls{
+        line-height: 0;
+    }
+}
+    
+/* @media screen and (max-width: 954px) {
     .music-card{
         width: 130px;
         font-size: 20px;
@@ -865,7 +1042,7 @@ hr{
     .jumbo-header{
         font-size: 90px;
     }
-  }
+  } */
   
   @media screen and (max-width: 875px) {
     .jumbo-body{
@@ -889,7 +1066,7 @@ hr{
 }
   @media screen and (max-width: 767px) {
 
-    .music-card{
+    /* .music-card{
         position: relative;
         width: 100%;
         margin: 0;
@@ -898,7 +1075,7 @@ hr{
     }
     .song{
         font-size: 20px;
-    }
+    } */
 
          /* FOR DATAGRID */
   
@@ -933,12 +1110,10 @@ hr{
 
   }
 
-  @media screen and (max-width: 672px){
+  @media screen and (max-width: 710px){
 
       /* NAV */
-    .nav-item, #logo{
-        display: inline-block;
-    }
+ 
 
     .navbar #navmenu{
       line-height: 60px;
@@ -969,6 +1144,14 @@ hr{
     }
   }
   @media screen and (max-width: 414px) {
+
+    .music-player .music-message{
+        display: none;
+    }
+
+    .music-message .song{
+        display: none;
+    }
 
     .jumbotron{
         padding-top: 90px;
@@ -1023,3 +1206,5 @@ hr{
     }
   
 }
+
+

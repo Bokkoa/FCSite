@@ -25,7 +25,7 @@ export class MusicComponent implements OnInit {
     this.player = new Audio(this.pathFile + 'BraveNewWorld.mp3');
     this.status = 'pl';
     this.songName = "Brave New World";
-    this.player.play();
+    // this.player.play();
 
   }
 

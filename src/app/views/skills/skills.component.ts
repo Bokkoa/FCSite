@@ -30,6 +30,11 @@ export class SkillsComponent implements OnInit {
     //  LANGUAGES
      this.LanguageSkills = [
        {
+         name: 'COBOL',
+         image: this.skillUrl + 'cobol.png',
+         level: 'skill-red'
+       },
+       {
          name: 'C sharp',
          image: this.skillUrl + 'csharp.png',
          level: 'skill-blue'
@@ -224,9 +229,19 @@ export class SkillsComponent implements OnInit {
         level: 'skill-green'
       },
       {
+        name: 'XML',
+        image: this.skillUrl + 'xml.png',
+        level: 'skill-blue'
+      },
+      {
         name: 'TypeScript',
         image: this.skillUrl + 'typescript.png',
         level: 'skill-green'
+      },
+      {
+        name: 'JSON Web Token',
+        image: this.skillUrl + 'jwt.png',
+        level: 'skill-red'
       },
       {
         name: 'Express',
@@ -276,6 +291,16 @@ export class SkillsComponent implements OnInit {
         name: 'Git',
         image: this.skillUrl + 'git.png',
         level: 'skill-blue'
+      },
+      {
+        name: 'Firebase',
+        image: this.skillUrl + 'firebase.png',
+        level: 'skill-red'
+      },
+      {
+        name: 'Heroku',
+        image: this.skillUrl + 'heroku.png',
+        level: 'skill-red'
       },
     ],
     this.OSSkills = [
@@ -332,11 +357,7 @@ export class SkillsComponent implements OnInit {
         image: this.skillUrl + 'visualstudio.png',
         level: 'skill-green'
       },
-      {
-        name: 'Firebase',
-        image: this.skillUrl + 'firebase.png',
-        level: 'skill-red'
-      },
+   
     ];
   }
 

@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <ul id="navmenu" class="bg-dark">
+    <ul class="bg-dark" id="navmenu">
      <!-- [ngClass]="{'bg-dark':_router.url != '/example'}"> -->
     <button class="btn-dropdown" (click)="displayDropdown()"> 
         <fa-icon [icon]="faBars"></fa-icon> 
@@ -14,12 +14,16 @@
                     C</strong>ruz
             </span>
         </div>
-        <li class="nav-item"><a [routerLink]="['contact']" [routerLinkActive]="['active']" >Contacto</a></li>
-        <li class="nav-item"><a [routerLink]="['skills']" [routerLinkActive]="['active']" >Habilidades</a></li>
-        <li class="nav-item"><a [routerLink]="['home']" [routerLinkActive]="['active']" >Sobre mí</a></li>
-        
+        <hr>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['home']" [routerLinkActive]="['active']" >Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['skills']" [routerLinkActive]="['active']" >Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['contact']" [routerLinkActive]="['active']" >Contacto</a></li>
+        <hr>
+        <br>
+        <app-music></app-music>
     </ul>
-   
+    
+
 </nav>
 
 <div class="clearfix"></div>

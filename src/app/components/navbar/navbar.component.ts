@@ -31,7 +31,10 @@ export class NavbarComponent implements OnInit {
 
   displayDropdown(hostEvent=false){
     var lis = document.getElementsByClassName("nav-item") as HTMLCollectionOf<HTMLElement>;
-
+    var song = document.getElementsByClassName("song") as HTMLCollectionOf<HTMLElement>;
+    
+    song[0].classList.add('show');
+    
     if(this.display == false && !hostEvent){
 
       for (var iterator = 0; iterator < lis.length; iterator++){
